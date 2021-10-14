@@ -1,3 +1,5 @@
+import breakDownEnglish from "./breakDownEnglish.js";
+
 const morseCode = {
   a: '. -',
   b: '- . . .',
@@ -28,5 +30,14 @@ const morseCode = {
   fullstop: '. - . - .-',
   comma: '- - . . - -',
   query: '. . - - . .'
-}
-Object.assign({}, ...Object.entries(morseCode).map(([a,b]) => ({ [b]: a })))
+};
+
+breakDownEnglish(input);
+
+const englishToMorse = (fragments) => fragments.map(word => {
+  return word.map(char  => {
+    return morseCode[char];
+    }
+).join(" ")}).join("    ");
+
+export default englishToMorse;

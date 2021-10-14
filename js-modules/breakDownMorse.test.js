@@ -1,4 +1,4 @@
-describe ("test case for breaking down input function", () => {
+describe ("test case for breaking down english input function", () => {
 
   it("should throw new error when given input that is not a string", () => {
     expect(breakDown()).toThrowError("Must give valid text input");

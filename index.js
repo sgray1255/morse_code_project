@@ -1,55 +1,31 @@
-let str = "This is a really big sentence."
+import breakDownEnglish from "./js-modules/breakDownEnglish.js";
+import breakDownMorse from "./js-modules/breakDownMorse.js";
+// import breakDownMorse from "./js-modules/breakDownMorse.js";
+import englishToMorse from "./js-modules/englishToMorse.js";
+import morseToEnglish from "./js-modules/morseToEnglish.js";
+// import morseToEnglish from "./js-modules/morseToEnglish.js";
 
-const morseCode = {
-  a: '. -',
-  b: '- . . .',
-  c: '- . - .',
-  d: '- . .',
-  e: '.',
-  f: '. . - .',
-  g: '- - .',
-  h: '. . . .',
-  i: '. .',
-  j: '. - -',
-  k: '- . -',
-  l: '. - . .',
-  m: '- -',
-  n: '- .',
-  o: '- - -',
-  p: '. - - .',
-  q: '- - . -',
-  r: '. - .',
-  s: '. . .',
-  t: '-',
-  u: '. . -',
-  v: '. . . -',
-  w: '. - -',
-  x: '- . . -',
-  y: '- . - -',
-  z: '- - . .',
-  fullstop: '. - . - .-',
-  comma: '- - . . - -',
-  query: '. . - - . .'
-}
 
-const breakDown = (str) => {
-  if (typeof str !== 'string'){
-    new Error ("Must give valid text input")
-  } else {
-    const lower = str.toLowerCase();
-    const words = lower.split(" ");
-    const fragments = words.map(word => word.split(''));
-    console.log(fragments);
-    return fragments;
-}
-};
 
-const fragments = breakDown(str);
+const button = document.querySelector("#translate");
 
-const translated = fragments.map(word => {
-  return word.map(char  => {
-    return morseCode[char];
-    }
-).join(" ")}).join("      ");
+button.addEventListener("click", (event) => {
 
-console.log(translated);
+  const textField = document.querySelector("#input");
+  const input = textField.value;
+
+  event.preventDefault();
+  
+  if(!input) {
+    alert("Type a phrase in English or morse code to translate");
+    return;
+  }
+  
+  console.log(morseToEnglish(breakDownMorse(input)));
+  
+  // console.log();
+  
+  // console.log(englishToMorse(breakDownEnglish(input)));
+  
+  // console.log(morseToEnglish(morseWord))
+})
