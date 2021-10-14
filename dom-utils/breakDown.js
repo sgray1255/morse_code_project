@@ -1,12 +1,10 @@
-const breakDown = (str) => {
+const breakDownMorse = (str) => {
   if (typeof str !== 'string'){
     new Error ("Must give valid text input")
   } else {
-    const lower = str.toLowerCase();
-    const words = lower.split(" ");
-    const wordsArr = words.split("");
-    return wordsArr;
+    const words = str.split("    ");
+    const chars = words.map(word => word.split(' '));
+    console.log(chars);
+    return chars;
 }
-}
-
-export default breakDown;
+};

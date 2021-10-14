@@ -1,12 +1,3 @@
-import breakDown from "./breakDown";
-// create object to house translation values 
-// convert toLowerCase();
-const wordsArr = breakDown(str);
-
-const translated = wordsArr.map(word => word.map(char => char))
-
-
-
 const morseCode = {
   a: '. -',
   b: '- . . .',
@@ -38,4 +29,4 @@ const morseCode = {
   comma: '- - . . - -',
   query: '. . - - . .'
 }
-
+Object.assign({}, ...Object.entries(morseCode).map(([a,b]) => ({ [b]: a })))
