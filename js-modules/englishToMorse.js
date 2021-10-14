@@ -38,6 +38,6 @@ const englishToMorse = (fragments) => fragments.map(word => {
   return word.map(char  => {
     return morseCode[char];
     }
-).join(" ")}).join("    ");
+).join("")}).join("/");
 
 export default englishToMorse;

@@ -4,7 +4,8 @@ const breakDownMorse = () => {
   } else {
     const words = str.split("    ").map(word => word.split(' '));
     const toBeTranslated = words.map(char => char.join(' '));
-    return toBeTranslated;
+    
+    return words;
 }
 };
 

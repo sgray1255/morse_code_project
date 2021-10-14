@@ -37,12 +37,9 @@ const alphabet = Object.assign({}, ...Object.entries(morseCode).map(([a,b]) => (
 
 breakDownMorse(input);
 
-const morseToEnglish = (array) => array.map(letter => {
-  return letter.map(letter => {
-    return alphabet[letter];
-  })  
+const morseToEnglish = (word) => { 
+    return word.map(letter =>  alphabet[letter].join(" ")).join("");
     }
-).join("");
 
 
 export default morseToEnglish;
