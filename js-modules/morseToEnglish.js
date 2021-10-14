@@ -1,11 +1,5 @@
-import breakDown from "./breakDown";
-// create object to house translation values 
-// convert toLowerCase();
-const wordsArr = breakDown(str);
 
-const translated = wordsArr.map(word => word.map(char => char))
-
-
+import breakDownMorse from "./breakDownMorse.js";
 
 const morseCode = {
   a: '. -',
@@ -37,5 +31,15 @@ const morseCode = {
   fullstop: '. - . - .-',
   comma: '- - . . - -',
   query: '. . - - . .'
-}
+};
 
+const alphabet = Object.assign({}, ...Object.entries(morseCode).map(([a,b]) => ({ [b]: a })));
+
+breakDownMorse(input);
+
+const morseToEnglish = (word) => { 
+    return word.map(letter =>  alphabet[letter].join(" ")).join("");
+    }
+
+
+export default morseToEnglish;
