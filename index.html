@@ -7,14 +7,17 @@
   <title>Morse Translator</title>
 </head>
 <body>
-  <div>
-    <input id="input" type="text">
-    <button id="translate">Translate</button>
-  </div>
+  <form>
+    <input id="englishInput" type="text" placeholder="Enter text">
+    <button id="translateEnglish">Translate</button>
+    <input id="morseInput" type="text" placeholder="Enter text">
+    <button id="translateMorse">Translate</button>
+  </form>
 
   <div id="output">
-    
+
   </div>
+
 
   <script type="module" src="./js-modules/breakDownEnglish.js"></script>
   <script type="module" src="./js-modules/breakDownMorse.js"></script>

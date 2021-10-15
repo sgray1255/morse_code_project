@@ -1,8 +1,8 @@
-const breakDownEnglish = (str) => {
-  if (typeof str !== 'string'){
+const breakDownEnglish = (input) => {
+  if (typeof input !== 'string'){
     new Error ("Must give valid text input")
   } else {
-    const lower = str.toLowerCase();
+    const lower = input.toLowerCase();
     const words = lower.split(" ");
     const fragments = words.map(word => word.split(''));
     console.log(fragments);
