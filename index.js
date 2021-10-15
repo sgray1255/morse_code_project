@@ -6,14 +6,16 @@ import morseToEnglish from "./js-modules/morseToEnglish.js";
 
 
 
-const button = document.querySelector("#translate");
+const button = document.querySelector("#translateEnglish");
 
-let list = {};
+
 
 
 button.addEventListener("click", (event) => {
 
-  const textField = document.querySelector("#input");
+  event.preventDefault();
+
+  const textField = document.querySelector("#englishInput");
   const input = textField.value;
 
   
@@ -23,7 +25,7 @@ button.addEventListener("click", (event) => {
     return;
   }
   
-  console.log((breakDownMorse(input)));
+  // console.log((breakDownMorse(input)));
   
   // d
   
@@ -42,6 +44,47 @@ button.addEventListener("click", (event) => {
     output.appendChild(translation);
   } else {
     output.appendChild(translation);
+  };
+
+ 
+});
+
+const morseButton = document.querySelector("#translateMorse");
+
+morseButton.addEventListener("click", (event) => {
+
+  event.preventDefault();
+
+  const text = document.querySelector("#morseInput");
+  const input = text.value;
+
+  
+  
+  if(!input) {
+    alert("Type a phrase in English or morse code to translate");
+    return;
+  }
+  
+  // console.log((breakDownMorse(input)));
+  
+  // d
+  
+  // console.log(englishToMorse(breakDownEnglish(input)));
+  
+  console.log(typeof morseToEnglish(breakDownMorse(input)));
+  console.log(morseToEnglish(breakDownMorse(input)));
+   
+  const translationMorse = document.createElement('h4');
+  translationMorse.classList.add("translationMorse");
+  const textMorse = `${morseToEnglish(breakDownMorse(input))}`;
+  const morseNode = document.createTextNode(textMorse);
+  translationMorse.appendChild(morseNode);
+
+  if (output.innerHTML) {
+    output.innerHTML = "";
+    output.appendChild(translationMorse);
+  } else {
+    output.appendChild(translationMorse);
   };
 
  
