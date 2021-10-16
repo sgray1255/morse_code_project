@@ -1,0 +1,86 @@
+@use "./partials/textFields";
+@use "./partials/textBoxes";
+@use "./partials/buttons";
+
+.language {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'PT sans', sans-serif;
+  font-weight: normal;
+  color: #1967D2;
+  font-size: 15px;
+  border-bottom: 1px solid lightgray;
+  
+}
+
+.language > p {
+  border-bottom: 2px solid #1967D2;
+  
+}
+
+.textField {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+ 
+
+}
+
+.inputs { 
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid lightgray;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.englishDiv {
+  @extend textField;
+  align-items: center;
+}
+
+.morseDiv {
+  @extend textField;
+  align-items: center;
+}
+#englishInput {
+  @extend textInput;
+  border-right: 1px solid lightgray;
+  width: 50%;
+}
+
+#morseInput {
+  @extend textInput;
+}
+
+.translateButtons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#translateEnglish {
+  @extend translateButton;
+}
+
+#translateMorse {
+  @extend translateButton;
+  
+}
+
+#translateEnglish:hover {
+  @extend translateButton;
+  border-bottom: 2px solid #1967D2;
+  cursor: pointer;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
+#translateMorse:hover {
+  @extend translateButton;
+  border-bottom: 2px solid #1967D2;
+  cursor: pointer;
+  background-color: lightgray;
+  border-radius: 5px;
+}

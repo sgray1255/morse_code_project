@@ -4,18 +4,70 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="index.css">
   <title>Morse Translator</title>
 </head>
 <body>
-  <form>
-    <input id="englishInput" type="text" placeholder="Enter text">
-    <button id="translateEnglish">Translate</button>
-    <input id="morseInput" type="text" placeholder="Enter text">
-    <button id="translateMorse">Translate</button>
+  <div class="titleCard">
+    <span class="titleCard__M" style="color:#4285F4">M</span>
+    <span class="titleCard__O" style="color:#EA4535">o</span>
+    <span class="titleCard__R" style="color:#F8BC32">r</span>
+    <span class="titleCard__S" style="color:#4285F4">s</span>
+    <span class="titleCard__E" style="color:#4FA854">e</span>
+    <span class="titleCard__Translate">Translate</span>
+  </div>
+  <hr class="hr">
+  <form class="textField">
+    <div class="language">
+      <p>ENGLISH</p>
+      <i class="material-icons">compare_arrows</i>
+      <p>MORSE</p>
+    </div>
+    <div class="inputs">
+      <input id="englishInput" onfocus="this.value = ''" type="text" >
+      <input id="morseInput" onfocus="this.value = ''" type="text" >
+    </div>
+    <div class="translateButtons">
+      <button id="translateEnglish">Translate</button>
+      <button id="translateMorse">Translate</button>
+    </div>
   </form>
 
   <div id="output">
 
+  </div>
+
+  <div class="morseChart">
+    <p>a / .-</p>
+    <p>b / -...</p>
+    <p>c / -.-.</p>
+    <p>d / -..</p>
+    <p>e / .</p>
+    <p>f / ..-.</p>
+    <p>g / --.</p>
+    <p>h / ....</p>
+    <p>i / ..</p>
+    <p>j / .--</p>
+    <p> k / -.-</p>
+    <p>l / .-..</p>
+    <p>m / --</p>
+    <p>n / -.</p>
+    <p>o / ---</p>
+    <p>p / .--.</p>
+    <p>q / --.-</p>
+    <p>r / .-.</p>
+    <p>s / ...</p>
+    <p>t / -</p>
+    <p>u / ..-</p>
+    <p>v / ...-</p>
+    <p>w / .--</p>
+    <p>x / -..-</p>
+    <p>y / -.--</p>
+    <p>z / --..</p>
   </div>
 
 
