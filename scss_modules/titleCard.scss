@@ -1,0 +1,47 @@
+@use "./partials/_logoStyle.scss";
+
+.titleCard {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  
+
+  &__M {
+    
+    @extend logo;
+  }
+
+  &__O {
+    
+    @extend logo;
+  }
+
+  &__R{
+    
+    @extend logo;
+  }
+
+  &__S{
+    
+    @extend logo;
+  }
+
+  &__E {
+    
+    @extend logo;
+  }
+
+  &__Translate {
+    @extend logo;
+    font-weight: normal;
+    color: gray;
+    font-size: 17.5px;
+    margin-left: 5px;
+    letter-spacing: -1px;
+  }
+
+}
+
+.hr {
+  border-top: 0.5px solid lightgray;
+}
