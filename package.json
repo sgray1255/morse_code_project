@@ -1,0 +1,27 @@
+{
+  "name": "init",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^27.2.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-jest": "^27.2.5"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgray1255/morse_code_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sgray1255/morse_code_project/issues"
+  },
+  "homepage": "https://github.com/sgray1255/morse_code_project#readme"
+}
