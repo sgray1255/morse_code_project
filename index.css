@@ -1,4 +1,4 @@
-logo, .titleCard__M, .titleCard__O, .titleCard__R, .titleCard__S, .titleCard__E, .titleCard__Translate {
+logo, .titleCard__M, .titleCard__O, .titleCard__R, .titleCard__S, .titleCard__E, .titleCard__Translate, .titleCard__morse {
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -16,6 +16,14 @@ logo, .titleCard__M, .titleCard__O, .titleCard__R, .titleCard__S, .titleCard__E,
   font-size: 17.5px;
   margin-left: 5px;
   letter-spacing: -1px;
+}
+.titleCard__morse {
+  font-weight: normal;
+  color: gray;
+  font-size: 17.5px;
+  margin-left: 5px;
+  letter-spacing: -1px;
+  margin-left: 2%;
 }
 
 .hr {
@@ -130,9 +138,10 @@ translateButton, #translateEnglish, #translateMorse, #translateEnglish:hover, #t
 
 .morseChart {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 100px 100px 100px 100px 100px;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  padding: 10%;
+  margin-top: 50px;
+  margin-left: 25%;
 }
 
 .morseChart > p {
